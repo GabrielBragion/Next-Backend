@@ -3,7 +3,7 @@ export function allowCors(handler) {
     // ✅ Garantir que `CORS_ALLOWED_ORIGINS_REMOTE` não seja `undefined` ou vazio
     const allowedOrigins = process.env.CORS_ALLOWED_ORIGINS_REMOTE
       ? process.env.CORS_ALLOWED_ORIGINS_REMOTE.split(",")
-      : ["https://login-frontend-five-kappa.vercel.app", "https://backoffice-login-com-blockchain.vercel.app"];
+      : [];
 
     const origin = req.headers.origin || "";
 
